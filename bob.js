@@ -11,7 +11,7 @@ class Bob{
       this.y=y;
       this.radius=radius;
      // this.image=loadImage("paper.png");
-      this.body=Bodies.circle(this.x,this.y,(this.radius-20)/2,options);
+      this.body=Bodies.circle(this.x,this.y,this.radius,options);
       World.add(world,this.body);
     
           }
@@ -21,9 +21,11 @@ class Bob{
           translate(bobpos.x,bobpos.y)
          //console.log("paper");
          // strokeWeight(3);
-         // fill("red");
-         imageMode(CENTER);
-         image(this.image,0,0,this.radius,this.radius);
+          fill("red");
+          ellipseMode(CENTER);
+          ellipse(0,0,50);
+         //imageMode(CENTER);
+         //image(this.image,0,0,this.radius,this.radius);
       pop();
           }
   }

@@ -1,5 +1,5 @@
 class Rope{
-    constructor(body1,body2,offsetX,offsetY){
+    constructor(bodyA,bodyB,offsetX,offsetY){
     this.offsetX=offsetX;
     this.offsetY=offsetY;
     
@@ -15,8 +15,11 @@ class Rope{
     display(){
         var pointA=this.rope.bodyA.position;
         var pointB=this.rope.bodyB.position;
+        //var x2=pointB.x+;
+        //var y2 =pointB.y+this.offsetY
         strokeWeight(2);
-        line(pointA.x,pointA.y,pointB.x,pointB.y)
+        fill("green");
+        line(pointA.x,pointA.y,pointB.x+this.offsetX,pointB.y+this.offsetY)
 
     }
 }
